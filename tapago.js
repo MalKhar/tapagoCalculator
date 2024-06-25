@@ -18,7 +18,6 @@ function taPago(inFront, left) {
   let pagoCount = 0;
   let naoPagoCount = 0;
   for (i = 0; i < 5; i++) {
-    console.log(isPaid());
     isPaid() ? pagoCount++ : naoPagoCount++;
   }
   pagoCount > naoPagoCount ? console.log("Tá pago") : console.log("Mamou");
