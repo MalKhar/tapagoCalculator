@@ -8,7 +8,7 @@ button.addEventListener("click", () => {
 function taPago(inFront, left) {
   function isPaid() {
     let faltam = left;
-    let sum = 0;
+    let sum = Math.floor(Math.random() * (25 - 5) + 5);
     for (x = 0; x < inFront; x++) {
       let mediaLigacao = Math.floor(Math.random() * (25 - 5) + 5);
       sum += mediaLigacao;
