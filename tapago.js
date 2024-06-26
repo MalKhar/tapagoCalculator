@@ -33,6 +33,8 @@ function taPago(inFront, goal) {
     return "Mamou";
   } else if (result == 100) {
     return "Tá pago!";
+  } else if (result == 69) {
+    return "Nice";
   } else {
     return "Você tem " + result + "% de chance de estar pago.";
   }
