@@ -3,6 +3,9 @@ const button = document.querySelector("button");
 const result = document.querySelector(".result");
 button.addEventListener("click", () => {
   result.innerHTML = taPago(inputs[0].value, inputs[1].value);
+  result.innerHTML === "Mamou"
+    ? result.classList.add("red")
+    : result.classList.remove("red");
 });
 
 function taPago(inFront, left) {
