@@ -28,7 +28,12 @@ function taPago(inFront, goal) {
   console.log("pago count" + pagoCount);
   let result = (pagoCount / 1000) * 100;
   console.log(result);
-  return result > 0
-    ? `Você tem ${result.toFixed(1)}% de chance de já estar pago`
-    : "Mamou";
+
+  if (result == 0) {
+    return "Mamou";
+  } else if (result == 100) {
+    return "Tá pago!";
+  } else {
+    return "Você tem " + result + "% de chance de estar pago.";
+  }
 }
