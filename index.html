@@ -13,15 +13,17 @@
         <h1>Calculadora</h1>
         <h2>Pessoas na frente</h2>
         <input class="bernardo" type="number" />
-        <h2>Qts min faltam</h2>
-        <input type="number" /><button>Verify</button>
+        <h2>Intervalo / saída</h2>
+        <input type="time" min="09:00" max="14:00" /><button>Verify</button>
         <h1 class="result"></h1>
       </div>
       <div class="falhas">
         <h1>Quantas vezes a calculadora falhou</h1>
         <h2 class="counter red">A calculadora falhou 0 vezes</h2>
+        <h1 class="clock"></h1>
       </div>
     </div>
   </body>
-  <script src="tapago.js"></script>
+  <script type="module" src="tapago.js"></script>
+  <script type="module" src="time.js"></script>
 </html>

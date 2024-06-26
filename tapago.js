@@ -1,18 +1,21 @@
+import { calcTimeLeft } from "./time.js";
+
 const inputs = document.querySelectorAll("input");
 const button = document.querySelector("button");
 const result = document.querySelector(".result");
 button.addEventListener("click", () => {
-  result.innerHTML = taPago(inputs[0].value, inputs[1].value);
+  result.innerHTML = taPago(inputs[0].value, `${inputs[1].value}:00`);
   result.innerHTML === "Mamou"
     ? result.classList.add("red")
     : result.classList.remove("red");
 });
 
-function taPago(inFront, left) {
+function taPago(inFront, goal) {
   function isPaid() {
-    let faltam = left;
+    let faltam = calcTimeLeft(goal);
+    console.log(faltam);
     let sum = Math.floor(Math.random() * (25 - 5) + 5);
-    for (x = 0; x < inFront; x++) {
+    for (let x = 0; x < inFront; x++) {
       let mediaLigacao = Math.floor(Math.random() * (25 - 5) + 5);
       sum += mediaLigacao;
     }
@@ -20,10 +23,10 @@ function taPago(inFront, left) {
   }
   let pagoCount = 0;
   let naoPagoCount = 0;
-  for (i = 0; i < 200; i++) {
+  for (let i = 0; i < 1000; i++) {
     isPaid() ? pagoCount++ : naoPagoCount++;
   }
-  pagoCount > naoPagoCount ? console.log("Tá pago") : console.log("Mamou");
-  return pagoCount > naoPagoCount ? "Tá pago" : "Mamou";
-  pagoCount = 0;
+  console.log("pago count" + pagoCount / 200);
+  let result = ((pagoCount / 1000) * 100).toFixed(2) + "%";
+  return "Você tem " + result + " de chance de já estar pago.";
 }
