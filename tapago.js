@@ -13,9 +13,9 @@ button.addEventListener("click", () => {
 function taPago(inFront, goal) {
   function isPaid() {
     let faltam = calcTimeLeft(goal);
-    let sum = Math.floor(Math.random() * (25 - 5) + 5);
+    let sum = Math.floor(Math.random() * 25);
     for (let x = 0; x < inFront; x++) {
-      let mediaLigacao = Math.floor(Math.random() * (25 - 5) + 5);
+      let mediaLigacao = Math.floor(Math.random() * 25);
       sum += mediaLigacao;
     }
     return sum > faltam ? true : false;
