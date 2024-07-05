@@ -10,6 +10,15 @@ button.addEventListener("click", () => {
     : result.classList.remove("red");
 });
 
+inputs.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    result.innerHTML = taPago(inputs[0].value, `${inputs[1].value}:00`);
+    result.innerHTML === "Mamou"
+      ? result.classList.add("red")
+      : result.classList.remove("red");
+  } else null
+});
+
 function taPago(inFront, goal) {
   function isPaid() {
     let faltam = calcTimeLeft(goal);
