@@ -21,13 +21,13 @@ inputs.addEventListener("keypress", function (e) {
 
 function taPago(inFront, goal) {
   function isPaid() {
-    let faltam = calcTimeLeft(goal);
+    let left = calcTimeLeft(goal);
     let sum = Math.floor(Math.random() * 25);
     for (let x = 0; x < inFront; x++) {
       let mediaLigacao = Math.floor(Math.random() * 25);
       sum += mediaLigacao;
     }
-    return sum > faltam ? true : false;
+    return sum > left ? true : false;
   }
   let pagoCount = 0;
   let naoPagoCount = 0;
