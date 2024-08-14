@@ -16,7 +16,7 @@ inputs.addEventListener("keypress", function (e) {
     result.innerHTML === "Mamou"
       ? result.classList.add("red")
       : result.classList.remove("red");
-  } else null
+  } else null;
 });
 
 function taPago(inFront, goal) {
@@ -31,11 +31,11 @@ function taPago(inFront, goal) {
   }
   let pagoCount = 0;
   let naoPagoCount = 0;
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 10000; i++) {
     isPaid() ? pagoCount++ : naoPagoCount++;
   }
   console.log("pago count" + pagoCount);
-  let result = (pagoCount / 1000) * 100;
+  let result = (pagoCount / 10000) * 100;
   console.log(result);
 
   if (result == 0) {
